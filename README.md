@@ -65,6 +65,6 @@ O validador independente e o histórico da execução foram preservados na pasta
 
 Os gráficos e a análise estão em `relatorio/`. O PDF contém seis figuras, as 378 medianas e os menores e maiores resultados nos nove cenários. Os gráficos em PNG e SVG ficam em `relatorio/graficos/`. O texto em Markdown, o ZIP dos gráficos, os scripts de produção e suas dependências foram preservados na pasta de apoio e não são necessários para executar o projeto Java.
 
-O relatório foi formatado em Arial, com capa de Laila Vitória Marconatto, Instituto Federal Catarinense, Bacharelado em Ciência da Computação, Campus Rio do Sul, 2026, e inclui um link para este repositório. Os resultados reduzidos de validação foram mantidos somente no material de apoio e não devem ser usados no relatório como dados da rodada completa.
+O relatório usa Times New Roman, títulos de 13 pt em caixa alta e numerados e texto de 12 pt, com capa de Laila Vitória Marconatto, Instituto Federal Catarinense, Bacharelado em Ciência da Computação, Campus Rio do Sul, 2026, e inclui um link para este repositório. O Eclipse é a IDE do projeto; a rodada de medições foi iniciada diretamente pela JVM via PowerShell, sem depurador. Os resultados reduzidos de validação foram mantidos somente no material de apoio e não devem ser usados no relatório como dados da rodada completa.
 
 As explicações das adaptações foram preservadas em `../trabalho-ed2-apoio/ALTERACOES.md`.
