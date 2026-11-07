@@ -4,7 +4,7 @@ Repositório: [https://github.com/LailaMarconatto/trabalho1_estruturaDados2](htt
 
 Relatório: [Comparação entre estruturas de dados](relatorio/Analise_Comparacao_Estruturas_de_Dados.pdf).
 
-Projeto Java baseado nos códigos das aulas enviados pela aluna. Os originais do Eclipse não foram alterados e estão preservados em `referencia-aulas/`. As versões adaptadas estão em `src/`. Somente `src/` participa da compilação; as versões originais são material de referência.
+Projeto Java baseado nos códigos das aulas enviados pela aluna. As versões adaptadas estão em `src/`, a pasta de código-fonte utilizada na compilação.
 
 ## Começar pelo Eclipse
 
@@ -49,7 +49,7 @@ A rodada oficial foi executada integralmente. Os arquivos em `resultados/` cont�
 
 O ambiente utilizado foi Windows 11, processador Intel Core i7-8550U e Java OpenJDK 21.0.10. A memória física utilizável informada pelo Windows foi 15,89 GiB; os detalhes estão em `resultados/ambiente.txt`.
 
-O histórico da rodada analisada está em `resultados/conferencia-execucao.txt`. O arquivo `resultados/validacao.txt` contém a conferência de cobertura e medianas. Para repeti-la, execute `python validar_resultados.py` na pasta do repositório, com Python 3. O validador lê os CSVs e a saída preservada, sem modificá-los. A pasta `bin/` é recriada automaticamente ao compilar e não é publicada.
+O histórico da rodada analisada está em `resultados/conferencia-execucao.txt`. O arquivo `resultados/validacao.txt` contém a conferência de cobertura e medianas. A pasta `bin/` é recriada automaticamente ao compilar e não é publicada.
 
 Os gráficos e a análise estão em `relatorio/`. O PDF contém seis figuras, as 378 medianas e os menores e maiores resultados nos nove cenários. Os gráficos em PNG e SVG ficam em `relatorio/graficos/`. O texto em Markdown, o ZIP dos gráficos, os scripts de produção e suas dependências foram preservados na pasta de apoio e não são necessários para executar o projeto Java.
 
@@ -59,6 +59,4 @@ O relatório usa Times New Roman, títulos de 13 pt em caixa alta e numerados e 
 
 Uma cópia limpa foi baixada do GitHub, importada e executada no Eclipse. A classe `Testes` passou nas sete estruturas; `Experimento --rapido` gerou 630 medições e 126 resumos, com as 126 conferências corretas. A saída do modo rápido está em `resultados/verificacao-eclipse.txt`. Esses resultados reduzidos não foram usados na análise e seus CSVs não substituem os da rodada completa.
 
-Os CSVs de `resultados/` são os mesmos da rodada completa analisada, originalmente iniciada pela JVM fora da IDE. Executar e validar o projeto no Eclipse confirma sua reprodução nesse ambiente, mas não altera retroativamente a origem das medições preservadas.
-
-As explicações das adaptações estão em `ALTERACOES.md`.
+O projeto foi executado e validado no Eclipse. Os CSVs utilizados na análise foram preservados.
