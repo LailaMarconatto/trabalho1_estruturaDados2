@@ -1,0 +1,12 @@
+Java: 21.0.10
+VM: OpenJDK 64-Bit Server VM
+Sistema: Windows 11 amd64
+Processador (Windows): Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+Processadores logicos: 8
+Limite de heap JVM (bytes, nao e a RAM fisica): 4265607168
+RAM fisica utilizavel pelo Windows: 17060913152 bytes (15.89 GiB)
+Semente: 42
+Modo: completo
+
+Modelo do processador: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+Rodada concluida em: 2026-11-04T23:36:41.854513-03:00

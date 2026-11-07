@@ -1,0 +1,6 @@
+bin/
+.settings/
+*.log
+.deps/
+tmp/
+relatorio/qa/
