@@ -1,0 +1,3 @@
+OK: 1.890 medicoes, 378 combinacoes, cinco repeticoes por combinacao.
+OK: tamanhos, ordens, estruturas, operacoes, medianas e conversoes de unidades.
+OK: 378 conferencias de execucao e encerramento normal.

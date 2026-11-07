@@ -1,33 +1,21 @@
 # Comparação de estruturas de dados — ED2
 
-Repositório: [LailaMarconatto/trabalho1_estruturaDados2](https://github.com/LailaMarconatto/trabalho1_estruturaDados2).
+Repositório: [https://github.com/LailaMarconatto/trabalho1_estruturaDados2](https://github.com/LailaMarconatto/trabalho1_estruturaDados2).
 
 Relatório: [Comparação entre estruturas de dados](relatorio/Analise_Comparacao_Estruturas_de_Dados.pdf).
 
-Projeto Java baseado nos códigos das aulas enviados pela aluna. Os originais do Eclipse não foram alterados. As versões adaptadas estão em `src/`. Esta pasta contém os arquivos de entrega; cópias das aulas e materiais de preparação foram separados na pasta vizinha `trabalho-ed2-apoio/`, dispensável para compilar e executar o projeto.
+Projeto Java baseado nos códigos das aulas enviados pela aluna. Os originais do Eclipse não foram alterados e estão preservados em `referencia-aulas/`. As versões adaptadas estão em `src/`. Somente `src/` participa da compilação; as versões originais são material de referência.
 
 ## Começar pelo Eclipse
 
 1. Use **File > Import > General > Existing Projects into Workspace**.
-2. Selecione esta pasta, `trabalho-ed2`.
+2. Selecione a pasta baixada ou clonada deste repositório. O projeto importado se chama `ComparacaoEstruturasED2`.
 3. Configure um JDK 11 ou superior nas propriedades do projeto (a validação usou o Java 21 incluído no Eclipse).
 4. Execute `Testes` como Java Application para conferir as estruturas.
-5. Execute `Experimento` com o argumento `--rapido` para conferir o fluxo reduzido.
-6. Execute `Experimento` sem argumentos para os tamanhos oficiais. Use Run, sem o depurador, e configure esta pasta como diretório de trabalho.
+5. Para conferir o experimento, abra **Run > Run Configurations > Java Application**, selecione a classe `Experimento` e coloque `--rapido` em **Arguments > Program arguments**. Use a pasta do projeto como **Working directory**. Execute com **Run**, sem depurador. Os novos resultados ficam em `resultados-validacao/`.
+6. Para realizar outra rodada completa, execute `Experimento` sem argumentos. Essa opção sobrescreve os arquivos de `resultados/`: preserve-os ou use outra cópia do projeto para não substituir a rodada usada no relatório.
 
 O Java padrão encontrado no sistema é 8; ele não suporta os métodos de arquivos utilizados neste projeto. Escolha o Java 21 do Eclipse tanto para compilar quanto para executar.
-
-## Executar pelo PowerShell
-
-O script opcional está na pasta de apoio. A partir da pasta deste projeto:
-
-```powershell
-..\trabalho-ed2-apoio\executar.ps1 -Modo testes
-..\trabalho-ed2-apoio\executar.ps1 -Modo rapido
-..\trabalho-ed2-apoio\executar.ps1 -Modo completo
-```
-
-O script procura o Java incluído no Eclipse desta máquina e aceita outro JDK por `-JavaHome 'C:/caminho/do/jdk'`.
 
 ## Como o experimento funciona
 
@@ -61,10 +49,16 @@ A rodada oficial foi executada integralmente. Os arquivos em `resultados/` cont�
 
 O ambiente utilizado foi Windows 11, processador Intel Core i7-8550U e Java OpenJDK 21.0.10. A memória física utilizável informada pelo Windows foi 15,89 GiB; os detalhes estão em `resultados/ambiente.txt`.
 
-O validador independente e o histórico da execução foram preservados na pasta de apoio. Uma nova rodada completa sobrescreve os CSVs de `resultados/`; preserve uma cópia se quiser comparar rodadas. A pasta `bin/` será recriada automaticamente ao compilar.
+O histórico da rodada analisada está em `resultados/conferencia-execucao.txt`. O arquivo `resultados/validacao.txt` contém a conferência de cobertura e medianas. Para repeti-la, execute `python validar_resultados.py` na pasta do repositório, com Python 3. O validador lê os CSVs e a saída preservada, sem modificá-los. A pasta `bin/` é recriada automaticamente ao compilar e não é publicada.
 
 Os gráficos e a análise estão em `relatorio/`. O PDF contém seis figuras, as 378 medianas e os menores e maiores resultados nos nove cenários. Os gráficos em PNG e SVG ficam em `relatorio/graficos/`. O texto em Markdown, o ZIP dos gráficos, os scripts de produção e suas dependências foram preservados na pasta de apoio e não são necessários para executar o projeto Java.
 
-O relatório usa Times New Roman, títulos de 13 pt em caixa alta e numerados e texto de 12 pt, com capa de Laila Vitória Marconatto, Instituto Federal Catarinense, Bacharelado em Ciência da Computação, Campus Rio do Sul, 2026, e inclui um link para este repositório. O Eclipse é a IDE do projeto; a rodada de medições foi iniciada diretamente pela JVM via PowerShell, sem depurador. Os resultados reduzidos de validação foram mantidos somente no material de apoio e não devem ser usados no relatório como dados da rodada completa.
+O relatório usa Times New Roman, títulos de 13 pt em caixa alta e numerados e texto de 12 pt, com capa de Laila Vitória Marconatto, Instituto Federal Catarinense, Bacharelado em Ciência da Computação, Campus Rio do Sul, 2026, e inclui a URL completa deste repositório.
 
-As explicações das adaptações foram preservadas em `../trabalho-ed2-apoio/ALTERACOES.md`.
+## Reprodução no Eclipse e preservação dos dados
+
+Uma cópia limpa foi baixada do GitHub, importada e executada no Eclipse. A classe `Testes` passou nas sete estruturas; `Experimento --rapido` gerou 630 medições e 126 resumos, com as 126 conferências corretas. A saída do modo rápido está em `resultados/verificacao-eclipse.txt`. Esses resultados reduzidos não foram usados na análise e seus CSVs não substituem os da rodada completa.
+
+Os CSVs de `resultados/` são os mesmos da rodada completa analisada, originalmente iniciada pela JVM fora da IDE. Executar e validar o projeto no Eclipse confirma sua reprodução nesse ambiente, mas não altera retroativamente a origem das medições preservadas.
+
+As explicações das adaptações estão em `ALTERACOES.md`.
